@@ -1,6 +1,4 @@
-# Weather_App
-A full-stack Weather application with a Node.js &amp; Express backend and a React frontend. Fetches real-time weather data from WeatherAPI with input validation using Zod.
- # Weather App
+# Weather App
 
 A modern, full-stack weather application built with React (frontend) and Node.js/Express (backend). It fetches real-time weather data and displays it with a beautiful animated UI.
 
