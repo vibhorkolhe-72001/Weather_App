@@ -7,11 +7,14 @@ const weatherFetch = async (location) => {
   }&q=${encodeURIComponent(location)}&aqi=no`;
 
   try {
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    // Simulate network delay of 1 second
+
     const controller = new AbortController();
     const timeout = setTimeout(() => {
       controller.abort();
     }, 5000);
-
+    await sleep(1000);
     const response = await fetch(url, { signal: controller.signal });
     clearTimeout(timeout);
 

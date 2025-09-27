@@ -10,7 +10,7 @@ const getWeather = async (req, res) => {
     }
     const weatherData = await weatherFetch(query);
     if (weatherData.error) {
-      return errorHandler(weatherData.error.message, req, res, 404);
+      return errorHandler(weatherData.error.message, req, res, 200);
     }
 
     return responseSuccess(weatherData, req, res);
