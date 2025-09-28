@@ -1,4 +1,4 @@
-From node:current-alpine3.21
+FROM node:20-alpine
 
 WORKDIR /Weather_Backend
 
@@ -8,4 +8,4 @@ RUN npm install
 COPY . .
 EXPOSE 5000
 
-ENTRYPOINT ["npx","nodemon"]
+CMD ["node", "server.js"]
