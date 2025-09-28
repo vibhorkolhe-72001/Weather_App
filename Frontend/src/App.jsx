@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState(null);
 
   const fetchWeather = async (location) => {
-    const api_url = `http://192.168.0.102:5000/api/weather?query=${location}`;
+    const api_url = `http://192.168.1.12:5000/api/weather?query=${location}`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
 
